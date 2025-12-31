@@ -1,0 +1,25 @@
+# spec-ae/CITATION.cff
+cff-version: "1.2.0"
+type: software
+
+title: "Structural Explainability: Governance Boundary Specification"
+version: "0.9.0"
+date-released: "2025-12-31"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+
+repository-code: "https://github.com/structural-explainability/spec-gb"
+license: MIT
+
+keywords:
+  - structural-explainability
+  - accountability
+  - semantic-interoperability
+  - structural-constraints
+  - identity-regimes
+  - formal-ontology
+
+message: "If using this software, please cite it as described in this file."
