@@ -1,9 +1,9 @@
 # Conformance Checklist
 
 This document defines the criteria for determining whether an artifact
-conforms to the Governance Boundary specification.
+conforms to the Governance Boundary (GB) specification.
 
-Identifiers referenced in this document are the sole normative reference.
+Identifiers referenced in this document are the sole normative reference mechanism.
 Section ordering, formatting, and presentation are non-normative.
 
 An artifact may be a specification, schema, implementation, repository,
@@ -19,83 +19,94 @@ An artifact CONFORMS if and only if:
 
 Failure of any single check constitutes non-conformance.
 
-GB.CONFORMANCE.SE.REQUIRED
+## GB.ADAPTER.MANIFEST
 
-- [ ] The artifact explicitly claims conformance with Structural Explainability.
-- [ ] No requirement weakens or contradicts SE neutrality constraints.
-- Fail if: conformance is asserted without explicit SE conformance.
+- Adapter identity, scope, and compatibility claims are structurally declared.
+- Adapter manifests record claims only, not endorsements.
+- Fail if: adapter correctness, trust, approval, safety, compliance, or endorsement is asserted.
 
-GB.DEFINITION.CORE
+## GB.CANONICAL.ENCODING
 
-- [ ] The artifact defines governance artifacts and governance actions as structural constructs.
-- [ ] The artifact limits scope to governance structure only.
-- Fail if: epistemic, causal, or normative semantics are introduced.
+- Canonical encoding rules for governance artifacts and identifiers are explicitly defined.
+- Encoding rules are structural and interpretation-neutral.
+- Fail if: encoding implies semantic preference, authority, legitimacy, obligation, or epistemic priority.
 
-GB.ADAPTER.MANIFEST
+## GB.CONFORMANCE.SE.REQUIRED
 
-- [ ] Adapter identity, scope, and compatibility claims are structurally declared.
-- [ ] Adapter manifests record claims only, not endorsements.
-- Fail if: adapter correctness, trust, or approval is asserted.
+- The artifact explicitly claims conformance with Structural Explainability.
+- No requirement weakens, overrides, or contradicts SE neutrality constraints.
+- Fail if: GB conformance is asserted without explicit SE conformance.
 
-GB.CANONICAL.ENCODING
+## GB.DEFINITION.CORE
 
-- [ ] Canonical encoding rules for governance artifacts are explicitly defined.
-- [ ] Encoding rules are structural and interpretation-neutral.
-- Fail if: encoding implies semantic preference or authority.
+- The artifact defines governance artifacts and governance actions as structural constructs.
+- The artifact limits scope to governance structure only.
+- Fail if: epistemic, causal, interpretive, authoritative, legitimacy-bearing, obligation-bearing,
+  or enforcement semantics are introduced.
 
-GB.DEPENDENCY.GRAPH
+## GB.DEPENDENCY.GRAPH
 
-- [ ] Dependencies among governance artifacts are represented structurally.
-- [ ] Dependency relationships do not assert semantic or operational behavior.
-- Fail if: dependency semantics imply execution, enforcement, or causality.
+- Dependencies among governance artifacts are represented structurally.
+- Dependency relationships do not assert semantic, causal, operational, authoritative,
+  or normative behavior.
+- Fail if: dependency semantics imply execution order, enforcement, authority, obligation, causality,
+  or legitimacy.
 
-GB.GOVERNANCE.ACTION
+## GB.FINGERPRINT
 
-- [ ] Governance actions are recorded as structural events.
-- [ ] Action kinds are explicit and interpretation-neutral.
-- Fail if: actions imply legitimacy, authority, or enforcement.
+- The artifact defines or uses fingerprints only as structural identifiers for
+  traceability and change detection.
+- Fingerprints are not treated as endorsements, guarantees, trust signals, or authority signals.
+- Fail if: fingerprints are treated as endorsements, guarantees, trust signals, authority signals,
+  correctness claims, or compliance claims.
 
-GB.FINGERPRINT
+## GB.GOVERNANCE.ACTION
 
-- [ ] Governance artifacts MAY include structural fingerprints.
-- [ ] Fingerprints are used only for identification and traceability.
-- Fail if: fingerprints are treated as endorsements or trust signals.
+- Governance actions are recorded as structural events.
+- Action kinds are explicit and interpretation-neutral.
+- Fail if: actions imply legitimacy, authority, obligation, correctness, endorsement, or enforcement.
 
-GB.PROVENANCE
+## GB.PROVENANCE
 
-- [ ] Structural provenance for governance actions is recorded.
-- [ ] Provenance records describe governance lifecycle events only.
-- Fail if: provenance asserts interpretive or evaluative meaning.
+- Structural provenance for governance actions and artifact lifecycle events is recorded.
+- Provenance records describe lineage, process, or lifecycle events only.
+- Fail if: provenance asserts interpretive, evaluative, epistemic, causal, legitimacy-bearing,
+   authority-bearing, obligation-bearing, or enforcement meaning.
 
-GB.VERSIONING
-
-- [ ] Governance artifacts include explicit version identifiers.
-- [ ] Versioning rules are structural and deterministic.
-- Fail if: versioning is implicit, informal, or interpretation-dependent.
-
-GB.SCOPE.EXCLUSIONS
+## GB.SCOPE.EXCLUSIONS
 
 Verify that the artifact does not define:
 
-- [ ] domain vocabularies
-- [ ] application-specific semantics
-- [ ] behavioral models
-- [ ] causal explanations
-- [ ] epistemic evaluation
-- [ ] normative judgment or enforcement
-- [ ] exchange or interaction mechanisms
-- [ ] identity-and-persistence regime specifications
-- [ ] graph evolution semantics
-- [ ] interpretive/explanatory overlays (context, evidence, explanation, attestation)
+- domain vocabularies
+- application-specific semantics
+- behavioral models
+- causal explanations
+- epistemic evaluation
+- authority
+- legitimacy
+- obligation
+- normative judgment or enforcement
+- exchange or interaction mechanisms
+- identity-and-persistence regime specifications
+- graph evolution semantics
+- interpretive or explanatory overlays, including context, evidence, explanation, and attestation
 
-Presence of any of the above constitutes non-conformance.
+Presence of any excluded concern as a GB-defined construct constitutes non-conformance.
+
+## GB.VERSIONING
+
+- Governance artifacts include explicit version identifiers.
+- Versioning rules are structural and deterministic.
+- Fail if: versioning is implicit, informal, interpretation-dependent, authority-dependent,
+  or allows silent change.
 
 ## Final Determination
 
 An artifact CONFORMS if:
 
-- all checks above pass, and
-- no prohibited assertions are present.
+- all checks above pass
+- no prohibited assertions are present
+- conformance with Structural Explainability is preserved
 
 Otherwise, the artifact is NON-CONFORMANT.
 
@@ -104,6 +115,6 @@ Otherwise, the artifact is NON-CONFORMANT.
 Artifacts claiming conformance SHOULD include a declaration of the form:
 
 ```text
-Conforms to: GB Specification vx.y
-Conforms to: SE Specification vx.y
+Conforms to: GB Specification vX.Y
+Conforms to: SE Specification vX.Y
 ```

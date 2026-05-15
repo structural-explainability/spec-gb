@@ -1,0 +1,122 @@
+{
+  "schema": "se-boundary-conformance-checks-1",
+  "spec": {
+    "id": "GB",
+    "name": "Governance Boundary",
+    "version": "0.9.1.dev2+gc383e92e7.d20260515",
+    "status": "normative"
+  },
+  "checks": [
+    {
+      "id": "GB.ADAPTER.MANIFEST",
+      "checks": [
+        "Adapter identity, scope, and compatibility claims are structurally declared.",
+        "Adapter manifests record claims only, not endorsements."
+      ],
+      "failure_conditions": [
+        "adapter correctness, trust, approval, safety, compliance, or endorsement is asserted."
+      ]
+    },
+    {
+      "id": "GB.CANONICAL.ENCODING",
+      "checks": [
+        "Canonical encoding rules for governance artifacts and identifiers are explicitly defined.",
+        "Encoding rules are structural and interpretation-neutral."
+      ],
+      "failure_conditions": [
+        "encoding implies semantic preference, authority, legitimacy, obligation, or epistemic priority."
+      ]
+    },
+    {
+      "id": "GB.CONFORMANCE.SE.REQUIRED",
+      "checks": [
+        "The artifact explicitly claims conformance with Structural Explainability.",
+        "No requirement weakens, overrides, or contradicts SE neutrality constraints."
+      ],
+      "failure_conditions": [
+        "GB conformance is asserted without explicit SE conformance."
+      ]
+    },
+    {
+      "id": "GB.DEFINITION.CORE",
+      "checks": [
+        "The artifact defines governance artifacts and governance actions as structural constructs.",
+        "The artifact limits scope to governance structure only."
+      ],
+      "failure_conditions": [
+        "epistemic, causal, interpretive, authoritative, legitimacy-bearing, obligation-bearing,"
+      ]
+    },
+    {
+      "id": "GB.DEPENDENCY.GRAPH",
+      "checks": [
+        "Dependencies among governance artifacts are represented structurally.",
+        "Dependency relationships do not assert semantic, causal, operational, authoritative,"
+      ],
+      "failure_conditions": [
+        "dependency semantics imply execution order, enforcement, authority, obligation, causality,"
+      ]
+    },
+    {
+      "id": "GB.FINGERPRINT",
+      "checks": [
+        "The artifact defines or uses fingerprints only as structural identifiers for",
+        "Fingerprints are not treated as endorsements, guarantees, trust signals, or authority signals."
+      ],
+      "failure_conditions": [
+        "fingerprints are treated as endorsements, guarantees, trust signals, authority signals,"
+      ]
+    },
+    {
+      "id": "GB.GOVERNANCE.ACTION",
+      "checks": [
+        "Governance actions are recorded as structural events.",
+        "Action kinds are explicit and interpretation-neutral."
+      ],
+      "failure_conditions": [
+        "actions imply legitimacy, authority, obligation, correctness, endorsement, or enforcement."
+      ]
+    },
+    {
+      "id": "GB.PROVENANCE",
+      "checks": [
+        "Structural provenance for governance actions and artifact lifecycle events is recorded.",
+        "Provenance records describe lineage, process, or lifecycle events only."
+      ],
+      "failure_conditions": [
+        "provenance asserts interpretive, evaluative, epistemic, causal, legitimacy-bearing,"
+      ]
+    },
+    {
+      "id": "GB.SCOPE.EXCLUSIONS",
+      "checks": [
+        "domain vocabularies",
+        "application-specific semantics",
+        "behavioral models",
+        "causal explanations",
+        "epistemic evaluation",
+        "authority",
+        "legitimacy",
+        "obligation",
+        "normative judgment or enforcement",
+        "exchange or interaction mechanisms",
+        "identity-and-persistence regime specifications",
+        "graph evolution semantics",
+        "interpretive or explanatory overlays, including context, evidence, explanation, and attestation"
+      ],
+      "failure_conditions": [
+        "Presence of any excluded concern as a GB-defined construct constitutes non-conformance."
+      ]
+    },
+    {
+      "id": "GB.VERSIONING",
+      "checks": [
+        "Governance artifacts include explicit version identifiers.",
+        "Versioning rules are structural and deterministic."
+      ],
+      "failure_conditions": [
+        "versioning is implicit, informal, interpretation-dependent, authority-dependent,"
+      ]
+    }
+  ]
+}

@@ -22,7 +22,7 @@ editorial discretion and ensure deterministic placement.
 
 All identifiers follow this pattern:
 
-GB.<CATEGORY>.<SUBCATEGORY>.<QUALIFIER>
+All identifiers begin with `GB.` and use uppercase dot-separated semantic terms.
 
 Identifiers are:
 

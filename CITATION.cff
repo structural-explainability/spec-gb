@@ -1,9 +1,15 @@
-# spec-ae/CITATION.cff
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
 cff-version: "1.2.0"
 type: software
 
 title: "Structural Explainability: Governance Boundary Specification"
-version: "0.9.0"
+version: "0.9.1.dev2+gc383e92e7.d20260515"
 date-released: "2025-12-31"
 
 authors:
@@ -16,10 +22,11 @@ license: MIT
 
 keywords:
   - structural-explainability
-  - accountability
-  - semantic-interoperability
-  - structural-constraints
-  - identity-regimes
-  - formal-ontology
+  - governance-boundary
+  - structural-governance
+  - conformance
+  - provenance
+  - versioning
+  - boundary-specification
 
 message: "If using this software, please cite it as described in this file."

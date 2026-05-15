@@ -1,8 +1,6 @@
 # ============================================================
 # .github/workflows/ci-md.yml (Continuous Integration)
 # ============================================================
-# SOURCE: https://github.com/denisecase/templates
-#
 # WHY-FILE: Minimal checks for repositories where hygiene is the primary gate.
 # OBS: CI does not introduce additional style rules beyond repo configuration.
 # NOTE: This workflow intentionally avoids requiring Python or pre-commit for contributors.

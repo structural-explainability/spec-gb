@@ -1,0 +1,61 @@
+{
+  "schema": "se-boundary-requirements-1",
+  "spec": {
+    "id": "GB",
+    "name": "Governance Boundary",
+    "version": "0.9.1.dev2+gc383e92e7.d20260515",
+    "status": "normative"
+  },
+  "requirements": [
+    {
+      "id": "GB.ADAPTER.MANIFEST",
+      "note": "Defines the structural form for declaring adapter identity, scope, and claimed compatibility.",
+      "normative_source": "SPEC.md#GB.ADAPTER.MANIFEST"
+    },
+    {
+      "id": "GB.CANONICAL.ENCODING",
+      "note": "Defines requirements for canonical encoding of governance artifacts and identifiers.",
+      "normative_source": "SPEC.md#GB.CANONICAL.ENCODING"
+    },
+    {
+      "id": "GB.CONFORMANCE.SE.REQUIRED",
+      "note": "States that Governance Boundary conforms to the Structural Explainability specification.",
+      "normative_source": "SPEC.md#GB.CONFORMANCE.SE.REQUIRED"
+    },
+    {
+      "id": "GB.DEFINITION.CORE",
+      "note": "Defines Governance Boundary as a structural specification for governance-layer artifacts and rules.",
+      "normative_source": "SPEC.md#GB.DEFINITION.CORE"
+    },
+    {
+      "id": "GB.DEPENDENCY.GRAPH",
+      "note": "Defines structural dependency graphs among governance artifacts.",
+      "normative_source": "SPEC.md#GB.DEPENDENCY.GRAPH"
+    },
+    {
+      "id": "GB.FINGERPRINT",
+      "note": "Defines structural fingerprints used to identify governance artifacts or states.",
+      "normative_source": "SPEC.md#GB.FINGERPRINT"
+    },
+    {
+      "id": "GB.GOVERNANCE.ACTION",
+      "note": "Defines structural records of governance actions applied to artifacts.",
+      "normative_source": "SPEC.md#GB.GOVERNANCE.ACTION"
+    },
+    {
+      "id": "GB.PROVENANCE",
+      "note": "Defines structural provenance for governance actions and artifact lifecycle events.",
+      "normative_source": "SPEC.md#GB.PROVENANCE"
+    },
+    {
+      "id": "GB.SCOPE.EXCLUSIONS",
+      "note": "Defines what Governance Boundary explicitly does not specify.",
+      "normative_source": "SPEC.md#GB.SCOPE.EXCLUSIONS"
+    },
+    {
+      "id": "GB.VERSIONING",
+      "note": "Defines versioning rules for governance artifacts and specifications.",
+      "normative_source": "SPEC.md#GB.VERSIONING"
+    }
+  ]
+}

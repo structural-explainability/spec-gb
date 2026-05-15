@@ -45,28 +45,6 @@ do not affect identifier meaning.
 
 ---
 
-## GB.CONFORMANCE.SE.REQUIRED
-
-Any system claiming conformance with this specification MUST also conform to
-the Structural Explainability (SE) specification.
-
-GB MUST NOT weaken, override, or reinterpret any SE neutrality constraints.
-
-## GB.DEFINITION.CORE
-
-Governance Boundary defines a structural layer for recording governance-level
-artifacts and actions that operate relative to, but do not modify,
-the neutral substrate.
-
-GB defines structural forms for:
-
-- governance artifacts
-- governance actions
-- structural dependency relations
-- structural provenance for governance events
-
-GB does not define semantics, authority, or enforcement.
-
 ## GB.ADAPTER.MANIFEST
 
 GB MUST provide a structural form for declaring adapter identity, scope,
@@ -89,6 +67,28 @@ Canonical encoding:
 - ensures stable comparison
 - supports reproducibility and traceability
 - MUST NOT encode interpretive semantics
+
+## GB.CONFORMANCE.SE.REQUIRED
+
+Any system claiming conformance with this specification MUST also conform to
+the Structural Explainability (SE) specification.
+
+GB MUST NOT weaken, override, or reinterpret any SE neutrality constraints.
+
+## GB.DEFINITION.CORE
+
+Governance Boundary defines a structural boundary for
+recording governance-layer artifacts and actions
+that operate relative to, but do not modify, the neutral substrate.
+
+GB defines structural forms for:
+
+- governance artifacts
+- governance action records
+- structural dependency relations
+- structural provenance for governance events
+
+GB does not define semantics, authority, legitimacy, obligation, or enforcement.
 
 ## GB.DEPENDENCY.GRAPH
 
@@ -115,13 +115,15 @@ Fingerprints:
 ## GB.GOVERNANCE.ACTION
 
 GB MUST define structural records for governance actions applied to artifacts,
-including but not limited to publication, approval, deprecation, or supersession.
+including but not limited to
+recorded publication, recorded approval, recorded deprecation, or recorded supersession.
 
-Governance actions:
+Governance action records:
 
-- record that an action occurred
-- do not assert why it occurred
-- do not assert who is authoritative
+- record that an action label was applied
+- MUST identify the artifact or artifact state to which the action applies
+- MUST NOT assert why the action occurred
+- MUST NOT assert that the action was legitimate, authoritative, binding, correct, or enforceable
 
 ## GB.PROVENANCE
 
@@ -132,7 +134,27 @@ Governance provenance:
 
 - records lineage and process
 - MUST remain interpretation-neutral
-- MUST NOT assert epistemic validity or legitimacy
+- MUST NOT assert epistemic validity, legitimacy, authority, causality, or obligation
+
+## GB.SCOPE.EXCLUSIONS
+
+This specification does not define:
+
+- domain vocabularies
+- application-specific semantics
+- behavioral models
+- causal explanations
+- epistemic evaluation
+- authority
+- legitimacy
+- obligation
+- normative judgment or enforcement
+- exchange or interaction mechanisms
+- identity-and-persistence regime specifications
+- graph evolution semantics
+- interpretive or explanatory overlays, including context, evidence, explanation, and attestation
+
+These concerns are explicitly out of scope.
 
 ## GB.VERSIONING
 
@@ -143,16 +165,3 @@ Versioning:
 - MUST be explicit
 - MUST be stable
 - MUST NOT allow silent or implicit change
-
-## GB.SCOPE.EXCLUSIONS
-
-This specification does not define:
-
-- domain vocabularies
-- behavioral models
-- causal explanations
-- epistemic evaluation
-- normative judgment or enforcement
-- exchange or interaction mechanisms
-
-These concerns are explicitly out of scope.

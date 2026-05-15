@@ -1,0 +1,24 @@
+{
+  "schema": "se-boundary-scope-exclusions-1",
+  "spec": {
+    "id": "GB",
+    "name": "Governance Boundary",
+    "version": "0.9.1.dev2+gc383e92e7.d20260515",
+    "status": "normative"
+  },
+  "excluded": [
+    "domain vocabularies",
+    "application-specific semantics",
+    "behavioral models",
+    "causal explanations",
+    "epistemic evaluation",
+    "authority",
+    "legitimacy",
+    "obligation",
+    "normative judgment or enforcement",
+    "exchange or interaction mechanisms",
+    "identity-and-persistence regime specifications",
+    "graph evolution semantics",
+    "interpretive or explanatory overlays, including context, evidence, explanation, and attestation"
+  ]
+}

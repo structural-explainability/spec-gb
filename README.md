@@ -7,14 +7,25 @@
 
 > Authoritative specification of Governance Boundary (GB).
 
+GB and IB are normative boundary specifications that protect the stack
+and govern how downstream layers may use it.
+
 ## Overview
 
-The Governance Boundary (GB) specification defines the structural requirements
-for representing governance artifacts and actions whose identity, scope,
-and traceability must remain explicit and stable under reinterpretation.
+The Governance Boundary (GB) specification defines what
+structural artifacts and actions are
+allowed, required, constrained, or disallowed
+within the SE ecosystem.
 
 GB is a downstream specification that conforms to Structural Explainability (SE).
 All SE neutrality constraints apply.
+
+GB answers questions like:
+
+- What counts as a valid structural artifact?
+- What changes are permitted?
+- What conformance obligations exist?
+- What must be validated before downstream use?
 
 GB introduces no epistemic, causal, or normative commitments.
 GB records governance structure only.
@@ -28,10 +39,15 @@ are possible without altering the neutral substrate.
 GB defines constraints on:
 
 - governance artifacts (e.g., specifications, adapters, profiles, appendices)
-- governance actions over artifacts (e.g., publication, approval, deprecation)
+- governance actions over artifacts (e.g., recorded publication, recorded approval,
+  recorded deprecation, or recorded supersession)
 - versioning, dependency, and provenance structures
 
 GB does not define meaning, enforcement, or correctness of governance actions.
+
+GB protects the neutral substrate and downstream structural artifacts from a specific failure mode:
+
+- Unvalidated or unauthorized structural artifacts/actions entering the system.
 
 ## Versioning and Stability
 
@@ -111,23 +127,67 @@ it is valid, correct, legitimate, or enforced in any context.
 GB exists so that governance structure can remain stable
 across reinterpretation, disagreement, and changing institutional frameworks.
 
-## Developer (running pre-commit)
+## Command Reference
 
-Steps to run pre-commit locally. Install `uv`.
+<details>
+<summary>Show command reference</summary>
 
-Initialize once:
+### In a machine terminal
+
+Open a machine terminal where you want the project:
+
+```shell
+git clone https://github.com/structural-explainability/spec-gb
+
+cd spec-gb
+code .
+```
+
+### In a VS Code terminal
 
 ```shell
 uv self update
+uv python pin 3.15
+uv sync --extra dev --extra docs --upgrade
+
+# install git hooks once per clone
 uvx pre-commit install
-uvx pre-commit run --all-files
-```
 
-Save progress as needed:
+# generate/check registry artifacts
+uv run se-validate
+uv run se-ref-export
+uv run se-ref-export --check
+uv run se-ref-validate
+uv run se-validate --strict
 
-```shell
+# autofix and manual fix issues
 git add -A
-# If pre-commit makes changes, re-run `git add -A` before committing.
+uvx pre-commit run --all-files
+# repeat if changes were made
+git add -A
+uvx pre-commit run --all-files
+
+# do chores
+uv run python -m pyright
+uv run python -m pytest
+uv run python -m zensical build
+
+# save progress
+git add -A
 git commit -m "update"
 git push -u origin main
 ```
+
+</details>
+
+## Citation
+
+[CITATION.cff](./CITATION.cff)
+
+## License
+
+[MIT](./LICENSE)
+
+## Manifest
+
+[SE_MANIFEST.toml](./SE_MANIFEST.toml)

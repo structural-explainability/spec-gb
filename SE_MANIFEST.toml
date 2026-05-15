@@ -1,64 +1,97 @@
 # ============================================================
-# SE_MANIFEST.toml (Repository Intent, Scope, and Role)
+# SE_MANIFEST.toml (Repository Declaration)
+# spec-gb
 # ============================================================
 
-schema = "se-manifest-1"
-schema_url = "https://github.com/structural-explainability/spec-se/blob/main/manifests/se-manifest-1.md"
+schema = "se-manifest-schema"
+schema_url = "https://github.com/structural-explainability/se-manifest-schema/blob/main/manifest-schema.toml"
+
+# === Identity ===
 
 [meta]
-# Non-normative contextual information
-framework = "Structural Explainability"
-framework_url = "https://github.com/structural-explainability"
-framework_note = "Provides definitions and conventions for SE_MANIFEST semantics."
-description = "Declarative claim of repository intent, scope, and role."
 purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
 
 [repo]
 name = "spec-gb"
-org  = "structural-explainability"
+org = "structural-explainability"
+class = "specification"
 kind = "spec"
-status = "normative"
+status = "active"
 since = "2025"
-summary = "Defines the governance boundary for structural explainability."
+summary = "Defines the Governance Boundary for structural explainability."
 
 [layer]
 space = "SE"
-role  = "governance-boundary"
+role = "governance-boundary"
+
+# === Dependencies ===
 
 [depends]
 required = ["structural-explainability/spec-se@v1"]
 optional = []
 
+# === Provided artifacts ===
+
 [provides]
-artifacts = ["README.md", "SPEC.md", "IDENTIFIERS.md", "CONFORMANCE.md"]
+artifacts = [
+  "README.md",
+  "SPEC.md",
+  "IDENTIFIERS.md",
+  "CONFORMANCE.md",
+  "data/spec/requirements.json",
+  "data/spec/conformance-checks.json",
+  "data/spec/scope-exclusions.json",
+]
+
+# === Scope ===
 
 [scope]
 includes = [
-  "structural governance artifacts and constraints",
-  "adapter identity, scope, and compatibility claims",
-  "canonical encoding requirements for governance artifacts",
-  "structural dependency graphs among governance artifacts",
-  "structural governance actions over artifacts",
-  "structural provenance for governance actions and lifecycle events",
-  "versioning rules for governance artifacts and specifications",
-]
-excludes = [
-  "domain vocabularies",
-  "behavioral models",
-  "exchange or interaction mechanisms",
-  "causal explanations",
-  "epistemic evaluation",
-  "normative judgment or enforcement",
-  "interpretive explanation overlays",
-  "neutral substrate identity or persistence rules",
-  "graph evolution semantics",
+    "structural governance artifacts",
+    "adapter identity, scope, and compatibility claims",
+    "canonical encoding requirements",
+    "structural dependency graphs among governance artifacts",
+    "governance actions over artifacts",
+    "structural provenance for governance lifecycle events",
+    "versioning rules for governance artifacts and specifications",
 ]
 
+excludes = [
+    "domain vocabularies",
+    "behavioral models",
+    "causal explanations",
+    "epistemic evaluation",
+    "authority",
+    "legitimacy",
+    "obligation",
+    "normative judgment or enforcement",
+    "exchange or interaction mechanisms",
+    "interpretive explanation overlays",
+    "neutral substrate identity or persistence rules",
+    "graph evolution semantics",
+]
+
+# === Validation ===
+
+[validation]
+entrypoint = "uv run se-validate"
+strict_entrypoint = "uv run se-validate --strict"
+reference_entrypoint = "uv run se-ref-validate"
+export_check_entrypoint = "uv run se-ref-export --check"
+
+# === Behavior / governance ===
+
+[naming]
+pattern = "spec-*"
+
+[governance]
+authority = "structural-explainability"
+
+# === External references ===
 
 [citation]
 cff = "CITATION.cff"
 preferred = "spec"
-bib_hint = "case2025-spec-gb"
 
 [traceability]
 identifier_map = "structural-explainability/spec-gb/IDENTIFIERS.md"
