@@ -9,7 +9,7 @@ from spec_gb.ref_utils import find_repo_root
 
 
 def ref_export_main(argv: list[str] | None = None) -> int:
-    """Generate or check GB reference artifacts."""
+    """Generate or check reference artifacts."""
     parser = argparse.ArgumentParser(description="Export spec-gb data/spec artifacts.")
     parser.add_argument("--repo-root", type=Path, default=None)
     parser.add_argument("--version", default=None)
@@ -35,7 +35,7 @@ def ref_export_main(argv: list[str] | None = None) -> int:
 
 
 def ref_validate_main(argv: list[str] | None = None) -> int:
-    """Validate generated GB reference artifacts."""
+    """Validate generated reference artifacts."""
     parser = argparse.ArgumentParser(
         description="Validate spec-gb data/spec artifacts."
     )

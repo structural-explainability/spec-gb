@@ -14,15 +14,15 @@ purpose = "To make explicit the boundaries, responsibilities, and expectations o
 [repo]
 name = "spec-gb"
 org = "structural-explainability"
-class = "specification"
-kind = "spec"
+class = "spec"
+kind = "governance-boundary"
 status = "active"
 since = "2025"
 summary = "Defines the Governance Boundary for structural explainability."
 
 [layer]
 space = "SE"
-role = "governance-boundary"
+role = "specification"
 
 # === Dependencies ===
 
@@ -47,37 +47,39 @@ artifacts = [
 
 [scope]
 includes = [
-    "structural governance artifacts",
-    "adapter identity, scope, and compatibility claims",
-    "canonical encoding requirements",
-    "structural dependency graphs among governance artifacts",
-    "governance actions over artifacts",
-    "structural provenance for governance lifecycle events",
-    "versioning rules for governance artifacts and specifications",
+  "structural governance artifacts",
+  "adapter identity, scope, and compatibility claims",
+  "canonical encoding requirements",
+  "structural dependency graphs among governance artifacts",
+  "governance actions over artifacts",
+  "structural provenance for governance lifecycle events",
+  "versioning rules for governance artifacts and specifications",
 ]
 
 excludes = [
-    "domain vocabularies",
-    "behavioral models",
-    "causal explanations",
-    "epistemic evaluation",
-    "authority",
-    "legitimacy",
-    "obligation",
-    "normative judgment or enforcement",
-    "exchange or interaction mechanisms",
-    "interpretive explanation overlays",
-    "neutral substrate identity or persistence rules",
-    "graph evolution semantics",
+  "domain vocabularies",
+  "application-specific semantics",
+  "behavioral models",
+  "causal explanations",
+  "epistemic evaluation",
+  "authority",
+  "legitimacy",
+  "obligation",
+  "normative judgment or enforcement",
+  "exchange or interaction mechanisms",
+  "identity-and-persistence regime specifications",
+  "graph evolution semantics",
+  "interpretive or explanatory overlays",
 ]
 
 # === Validation ===
 
 [validation]
 entrypoint = "uv run se-validate"
-strict_entrypoint = "uv run se-validate --strict"
-reference_entrypoint = "uv run se-ref-validate"
 export_check_entrypoint = "uv run se-ref-export --check"
+reference_entrypoint = "uv run se-ref-validate"
+strict_entrypoint = "uv run se-validate --strict"
+tag_entrypoint = "uv run python -m se_manifest_schema validate --strict --require-tag"
 
 # === Behavior / governance ===
 
