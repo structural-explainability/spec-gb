@@ -66,14 +66,11 @@ Follow these steps exactly when creating a new release.
 
 1.1. `CITATION.cff` - update `version` and `date-released`
 1.2. CHANGELOG.md: add section, move unreleased entries, update links
+1.3. `pyproject.toml` - update `fallback-version` near end of file
 
-### Task 2. Sync and Validate
-
-Sync command reads `CITATION.cff` version and `date-released`
-and updates `pyproject.toml` fallback-version.
+### Task 2. Validate
 
 ```shell
-uv run se-manifest-version-sync
 uv sync --extra dev --extra docs --upgrade
 
 uv run se-validate

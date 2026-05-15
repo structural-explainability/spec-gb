@@ -12,7 +12,7 @@ from spec_gb.paths import repo_root
 
 
 def test_conformance_covers_all_canonical_identifiers() -> None:
-    """CONFORMANCE.md contains exactly the canonical GB requirement identifiers."""
+    """CONFORMANCE.md contains exactly the canonical requirement identifiers."""
     root = repo_root()
 
     requirements = extract_identifier_notes(
@@ -34,7 +34,7 @@ def test_conformance_covers_all_canonical_identifiers() -> None:
 
 
 def test_conformance_identifier_headings_are_alphabetical() -> None:
-    """CONFORMANCE.md GB requirement headings are alphabetical."""
+    """CONFORMANCE.md requirement headings are alphabetical."""
     root = repo_root()
 
     conformance_ids = extract_heading_identifiers(
@@ -46,7 +46,7 @@ def test_conformance_identifier_headings_are_alphabetical() -> None:
 
 
 def test_conformance_has_no_duplicate_identifier_headings() -> None:
-    """CONFORMANCE.md has no duplicate GB requirement headings."""
+    """CONFORMANCE.md has no duplicate requirement headings."""
     root = repo_root()
 
     conformance_ids = extract_heading_identifiers(
@@ -58,7 +58,7 @@ def test_conformance_has_no_duplicate_identifier_headings() -> None:
 
 
 def test_conformance_sections_have_failure_conditions() -> None:
-    """Each CONFORMANCE.md GB section has a failure condition."""
+    """Each CONFORMANCE.md section has a failure condition."""
     root = repo_root()
     conformance_text = load_text(root / "CONFORMANCE.md")
     conformance_ids = extract_heading_identifiers(

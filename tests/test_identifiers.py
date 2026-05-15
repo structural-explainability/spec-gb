@@ -1,4 +1,4 @@
-"""Tests for canonical GB requirement identifiers."""
+"""Tests for canonical requirement identifiers."""
 
 from spec_gb.export import SPEC_ID
 from spec_gb.extractor_utils import extract_identifier_notes
@@ -18,7 +18,7 @@ def test_identifiers_are_extractable() -> None:
 
 
 def test_identifiers_use_expected_prefix() -> None:
-    """All canonical identifiers use the GB prefix."""
+    """All canonical identifiers use the prefix."""
     root = repo_root()
     requirements = extract_identifier_notes(
         load_text(root / "IDENTIFIERS.md"),

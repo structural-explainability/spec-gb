@@ -9,8 +9,8 @@ cff-version: "1.2.0"
 type: software
 
 title: "Structural Explainability: Governance Boundary Specification"
-version: "0.9.1.dev2+gc383e92e7.d20260515"
-date-released: "2025-12-31"
+version: "0.9.1"
+date-released: "2026-05-15"
 
 authors:
   - family-names: Case

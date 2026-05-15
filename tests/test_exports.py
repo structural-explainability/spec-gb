@@ -1,4 +1,4 @@
-"""Tests for generated GB data/spec exports."""
+"""Tests for generated data/spec exports."""
 
 from dataclasses import asdict
 import json

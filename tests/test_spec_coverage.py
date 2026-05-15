@@ -12,7 +12,7 @@ from spec_gb.paths import repo_root
 
 
 def test_spec_covers_all_canonical_identifiers() -> None:
-    """SPEC.md contains exactly the canonical GB requirement identifiers."""
+    """SPEC.md contains exactly the canonical requirement identifiers."""
     root = repo_root()
 
     requirements = extract_identifier_notes(
@@ -34,7 +34,7 @@ def test_spec_covers_all_canonical_identifiers() -> None:
 
 
 def test_spec_identifier_headings_are_alphabetical() -> None:
-    """SPEC.md GB requirement headings are alphabetical."""
+    """SPEC.md requirement headings are alphabetical."""
     root = repo_root()
 
     spec_ids = extract_heading_identifiers(
@@ -46,7 +46,7 @@ def test_spec_identifier_headings_are_alphabetical() -> None:
 
 
 def test_spec_has_no_duplicate_identifier_headings() -> None:
-    """SPEC.md has no duplicate GB requirement headings."""
+    """SPEC.md has no duplicate requirement headings."""
     root = repo_root()
 
     spec_ids = extract_heading_identifiers(
@@ -58,7 +58,7 @@ def test_spec_has_no_duplicate_identifier_headings() -> None:
 
 
 def test_spec_has_non_empty_identifier_sections() -> None:
-    """Each SPEC.md GB requirement heading has section content."""
+    """Each SPEC.md requirement heading has section content."""
     root = repo_root()
     spec_text = load_text(root / "SPEC.md")
     spec_ids = extract_heading_identifiers(spec_text, expected_prefix=SPEC_ID)
