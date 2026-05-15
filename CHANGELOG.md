@@ -123,6 +123,6 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-manifest-schema/compare/v0.9.1...HEAD
-[0.9.1]: https://github.com/structural-explainability/se-manifest-schema/releases/tag/v0.9.1
-[0.9.0]: https://github.com/structural-explainability/se-manifest-schema/releases/tag/v0.9.0
+[Unreleased]: https://github.com/structural-explainability/spec-gb/compare/v0.9.1...HEAD
+[0.9.1]: https://github.com/structural-explainability/spec-gb/releases/tag/v0.9.1
+[0.9.0]: https://github.com/structural-explainability/spec-gb/releases/tag/v0.9.0
