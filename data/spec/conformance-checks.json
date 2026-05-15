@@ -3,7 +3,7 @@
   "spec": {
     "id": "GB",
     "name": "Governance Boundary",
-    "version": "0.9.1.dev2+gc383e92e7.d20260515",
+    "version": "0.9.1",
     "status": "normative"
   },
   "checks": [
