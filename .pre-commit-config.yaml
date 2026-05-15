@@ -108,7 +108,7 @@ repos:
 
   - repo: local
     hooks:
-      - id: se-theory-transformation-validate
+      - id: se-validate-se-manifest-toml
         name: E1) Validate SE_MANIFEST.toml
         language: system
         entry: uv run se-validate --strict

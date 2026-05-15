@@ -1,8 +1,11 @@
 # Governance Boundary Specification (GB)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
-![Build Status](https://github.com/structural-explainability/spec-gb/actions/workflows/ci-md.yml/badge.svg?branch=main)
-[![Check Links](https://github.com/structural-explainability/spec-gb/actions/workflows/links.yml/badge.svg)](https://github.com/structural-explainability/spec-gb/actions/workflows/links.yml)
+[![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/spec-gb)
+[![Tooling](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](./pyproject.toml)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
+
+[![CI](https://github.com/structural-explainability/spec-gb/actions/workflows/ci-python.yml/badge.svg?branch=main)](https://github.com/structural-explainability/spec-gb/actions/workflows/ci-python.yml)
+[![Links](https://github.com/structural-explainability/spec-gb/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/spec-gb/actions/workflows/links.yml)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/structural-explainability/spec-gb/security)
 
 > Authoritative specification of Governance Boundary (GB).
