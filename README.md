@@ -173,7 +173,6 @@ uvx pre-commit run --all-files
 # do chores
 uv run python -m pyright
 uv run python -m pytest
-uv run python -m zensical build
 
 # save progress
 git add -A
