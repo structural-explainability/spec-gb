@@ -1,5 +1,8 @@
 # Governance Boundary Identifiers (GB)
 
+> **Archived.**
+> **Retired and no longer authoritative. See README.md.**
+
 This document defines the stable requirement identifiers used by the
 Governance Boundary (GB) specification.
 
